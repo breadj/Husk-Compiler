@@ -1,0 +1,22 @@
+func fibHelper = Num k -> Num a ->
+    Num z -> Num
+// just to show how you can format
+// your code even in this way
+{ Num x; if k == 0 { x = a; }
+else { print z;
+x = fibHelper (k - 1) z (a + z); }
+return x; }
+
+func fibonacci = Num n -> Num
+{
+    Num x;
+    if n <= 1 {
+        x = n;
+    }
+    else {
+        x = fibHelper n 0 1;
+    }
+    return x;
+}
+
+Num x = fibonacci 12;

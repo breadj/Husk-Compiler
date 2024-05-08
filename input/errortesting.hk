@@ -1,0 +1,10 @@
+// three
+        // comments
+  // in a row
+
+func sum = Num a -> Num b -> Str {
+    return a + b;
+}
+
+
+print sum "help " "me";

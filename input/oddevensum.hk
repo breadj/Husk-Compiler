@@ -1,0 +1,28 @@
+type OddEven = { Num odd, Num even }
+
+func odd_even_sum =
+    Num n -> Num odd -> Num even -> Num i -> OddEven {
+	OddEven ret;
+	if (i > n) {
+		ret => odd even;
+	}
+	else {
+		Num newOdd;
+		Num newEven;
+		if i % 2 {
+			newOdd = odd + i;
+			newEven = even;
+		}
+		else {
+			newOdd = odd;
+			newEven = even + i;
+		}
+		ret = odd_even_sum n newOdd newEven (i + 1);
+	}
+	return ret;
+}
+
+OddEven oddeven = odd_even_sum 100 0 0 1;
+print oddeven.odd;
+print oddeven.even;
+print oddeven.odd + oddeven.even;

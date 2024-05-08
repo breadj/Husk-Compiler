@@ -1,0 +1,17 @@
+func factorial = Num n -> Num {
+	Num x;
+	if n <= 1 {
+		x = n;
+	}
+	else {
+	    // this is cool
+		x = n * factorial (n - 1);
+	}
+
+	return x;
+}
+
+Num fac = factorial 9 - 1;
+print fac;
+
+

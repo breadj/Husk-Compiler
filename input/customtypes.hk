@@ -1,0 +1,26 @@
+// implicitly creates func _init_TypeName = Type id1 -> Type id2 -> Type id3 -> TypeName
+type TypeName = { Num id1, Str id2, Str id3 }
+
+// implicitly calls TypeName obj = _init_TypeName 15 "scranner" "h"
+TypeName obj => 15 "scranner" "h";
+Num typeVar = obj.id1;
+print "billy " + obj.id2;
+
+type Person = { Str name, Num age }
+type Child = {
+    Str name,
+    Num age,
+    Person mother,
+    Person father
+}
+
+Person unknownMother => "Anastasia" 72 / 3;
+Child katya;
+Person yuri => "Yu" + "ri" 23;
+
+Person anastasia = unknownMother;
+katya => "Katya" 3 anastasia yuri;
+
+print "Katya's father is called " + katya.father.name;
+
+
